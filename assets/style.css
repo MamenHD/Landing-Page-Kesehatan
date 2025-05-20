@@ -27,6 +27,8 @@ body {
     font-family: "Ancizar Sans", sans-serif;
 }
 
+/* Navbar */
+
 nav {
     position: fixed;
     isolation: isolate;
@@ -91,6 +93,7 @@ nav {
     display: none;
 }
 
+/* Header Hero */
 
 .header_container {
     max-width: var(--max-width);
@@ -186,18 +189,16 @@ nav {
     text-align: center;
 }
 
-.header_content h1 span {
+.header_content span {
     color: var(--primary-color);
+    
 }
 
 .header_content p {
-    margin-bottom: 2rem;
-    columns: var(--text-dark);
-    line-height: 1.75rem;
-    text-align: center;
+    color: var(--text-dark);
 }
 
-.header_content form {
+.header_content .hero {
     margin-bottom: 4rem;
     padding: 1.5rem;
     display: flex;
@@ -209,7 +210,7 @@ nav {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-.header_content .input_row {
+.header_content .hero_row {
     width: 100%;
     display: flex;
     align-items: center;
@@ -217,37 +218,24 @@ nav {
     flex: 1;
 }
 
-.header_content .input_group {
+.header_content .hero_group {
     flex: 1;
 }
 
-.header_content .input_group h5 {
+.header_content .hero_group h5 {
     margin-bottom: 5px;
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--text-dark);
 }
 
-.header_content .input_group > div {
+.header_content .hero_group > div {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.header_content input {
-    width: 100%;
-    outline: none;
-    border: none;
-    font-size: 1rem;
-    background-color: transparent;
-}
-
-.header_content input::placeholder{
-    font-weight: 600;
-    color: var(--text-dark);
-}
-
-.header_content .input_group span {
+.header_content .hero_group span {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--primary-color);
@@ -271,15 +259,20 @@ nav {
     background-color: var(--primary-color-dark);
 }
 
-.header_content .bar {
+/* Footer */
+
+.bar {
     font-size: 0.9rem;
     color: var(--text-dark);
     text-align: center;
+    margin-bottom: 10px;
 }
 
 /* Responsive */
 
 @media (width > 768px) {
+
+    /* Navbar */
     nav{
         position: static;
         padding-block: 2rem 0;
@@ -363,6 +356,8 @@ nav {
         background-color: var(--primary-color-dark);
     }
 
+    /* Header Hero */
+
     .header_container{
         padding-block: 2rem;
         grid-template-columns: repeat(2, 1fr);
@@ -373,13 +368,13 @@ nav {
         grid-area: 1/2/2/3;
     }
 
-    .header_content :is(h1,p,.bar) {
-        text-align: left;
-    }
+    
 }
 
 @media (width >1024px) {
-    .header_content form {
+
+    /* Header Hero */
+    .header_content .hero {
         flex-direction: row;
     }
 

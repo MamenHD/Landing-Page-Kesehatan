@@ -1,3 +1,5 @@
+// Navbar Function
+
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
@@ -37,7 +39,7 @@ ScrollReveal().reveal(".header_content p", {
     delay: 400,
 });
 
-ScrollReveal().reveal(".header_content form", {
+ScrollReveal().reveal(".header_content .hero", {
     ...scrollRevealOption,
     delay: 600,
 });
