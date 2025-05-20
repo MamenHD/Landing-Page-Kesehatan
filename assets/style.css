@@ -175,6 +175,107 @@ nav {
     transform: translateY( -50%);
 }
 
+.header_content h1 {
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    font-weight: 400;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+    line-height: 5.5rem;
+    text-align: center;
+}
+
+.header_content h1 span {
+    color: var(--primary-color);
+}
+
+.header_content p {
+    margin-bottom: 2rem;
+    columns: var(--text-dark);
+    line-height: 1.75rem;
+    text-align: center;
+}
+
+.header_content form {
+    margin-bottom: 4rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem 0;
+    border-radius: calc(1rem + 10px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header_content .input_row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.header_content .input_group {
+    flex: 1;
+}
+
+.header_content .input_group h5 {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.header_content .input_group > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_content input {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+.header_content input::placeholder{
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.header_content .input_group span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.header_content button {
+    width: 100%;
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    white-space: nowrap;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.header_content button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.header_content .bar {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
 /* Responsive */
 
 @media (width > 768px) {
@@ -269,5 +370,19 @@ nav {
 
     .header_image {
         grid-area: 1/2/2/3;
+    }
+
+    .header_content :is(h1,p,.bar) {
+        text-align: left;
+    }
+}
+
+@media (width >1024px) {
+    .header_content form {
+        flex-direction: row;
+    }
+
+    .header_content button {
+        width: fit-content;
     }
 }
