@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #ff833e;
-    --primary-color-dark: #db6f35;
+    --primary-color: #3498db;  
+    --primary-color-dark: #2980b9;  
     --text-dark: #333333;
     --white: #ffffff;
     --max-width: 1200px;
@@ -92,6 +92,89 @@ nav {
 }
 
 
+.header_container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding-block: 8rem 2rem;
+    padding-inline: 1rem;
+    display: grid;
+    gap: 2rem;
+    overflow-x: hidden;
+}
+
+.header_image {
+    position: relative;
+    isolation: isolate;
+}
+
+.header_image::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("/assets/img/bg-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.header_image img{
+    max-width: 520px;
+    margin-inline: auto;
+}
+
+.header_image_card {
+    position: absolute;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    background-color: var(--white);
+    white-space: nowrap;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header_image_card span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.header_image_card-1 {
+    top: 25%;
+    left: 3rem;
+    transform: translate( -50%, -50%);
+    
+}
+
+.header_image_card-2 {
+    top: 10%;
+    right: 2rem;
+    transform: translateY( -50%);
+}
+
+.header_image_card-3 {
+    top: 60%;
+    left: 0;
+    transform: translateY( -50%);
+}
+
+.header_image_card-4 {
+    top: 70%;
+    right: 0;
+    transform: translateY( -50%);
+}
+
 /* Responsive */
 
 @media (width > 768px) {
@@ -178,5 +261,13 @@ nav {
         background-color: var(--primary-color-dark);
     }
 
-    
+    .header_container{
+        padding-block: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .header_image {
+        grid-area: 1/2/2/3;
+    }
 }
