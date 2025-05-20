@@ -142,6 +142,7 @@ nav {
     white-space: nowrap;
     border-radius: 5px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .header_image_card span {

@@ -29,21 +29,21 @@ ScrollReveal().reveal(".header_image img", {
 
 ScrollReveal().reveal(".header_content h1", {
     ...scrollRevealOption,
-    delay: 500,
+    delay: 200,
 });
 
 ScrollReveal().reveal(".header_content p", {
     ...scrollRevealOption,
-    delay: 1000,
+    delay: 400,
 });
 
 ScrollReveal().reveal(".header_content form", {
     ...scrollRevealOption,
-    delay: 1500,
+    delay: 600,
 });
 
 ScrollReveal().reveal(".header_image_card", {
-    duration: 1000,
-    interval: 500,
-    delay: 2500,
+    duration: 500,
+    interval: 300,
+    delay: 800,
 });
