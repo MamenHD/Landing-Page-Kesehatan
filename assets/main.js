@@ -16,6 +16,21 @@ navLinks.addEventListener("click", (e) => {
     menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
+// FAQ
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+    const item = question.parentNode;
+    item.classList.toggle('active');
+    
+    // Close other open items
+    document.querySelectorAll('.faq-item').forEach(otherItem => {
+      if (otherItem !== item && otherItem.classList.contains('active')) {
+        otherItem.classList.remove('active');
+      }
+    });
+  });
+});
+
 // Scroll Animastion
 
 const scrollRevealOption = {
@@ -49,3 +64,4 @@ ScrollReveal().reveal(".header_image_card", {
     interval: 300,
     delay: 800,
 });
+
