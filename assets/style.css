@@ -199,6 +199,7 @@ nav {
 }
 
 .header_content .hero {
+    margin-top: 1rem;
     margin-bottom: 4rem;
     padding: 1.5rem;
     display: flex;
