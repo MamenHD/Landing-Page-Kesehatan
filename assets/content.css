@@ -221,6 +221,143 @@
   color: var(--text-dark);
 }
 
+/* Fasilitas Pembelajaran Section */
+.facilities {
+  padding: 6rem 2rem;
+  background-color: #f8fafc;
+  position: relative;
+}
+
+.section_header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.section_title {
+  font-size: 2.8rem;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section_title span {
+  color: var(--primary-color);
+}
+
+.section_title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.section_subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.facility_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.facility_card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.facility_card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: var(--primary-color);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.facility_card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.facility_card:hover::before {
+  height: 100%;
+}
+
+.card_icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(52, 152, 219, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.facility_card:hover .card_icon {
+  background: var(--primary-color);
+  color: white;
+}
+
+.facility_card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.facility_card p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.learn_more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.learn_more i {
+  transition: transform 0.3s ease;
+}
+
+.learn_more:hover {
+  color: var(--primary-color-dark);
+}
+
+.learn_more:hover i {
+  transform: translateX(5px);
+}
+
 /* Testimonials Section */
 .testimonials {
   padding: 6rem 2rem;
@@ -272,11 +409,11 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 
 .testimonial_carousel::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none; 
 }
 
 .testimonial_card {
@@ -374,22 +511,6 @@
   transform: scale(1.2);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .testimonials {
-    padding: 4rem 1rem;
-  }
-  
-  .testimonial_card {
-    min-width: 280px;
-    padding: 2rem;
-  }
-  
-  .section_title {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-  }
-}
 
 /* CTA Section */
 .cta {
@@ -560,6 +681,22 @@
     width: 100%;
   }
 
+   .facilities {
+    padding: 4rem 1.5rem;
+  }
+  
+  .section_title {
+    font-size: 2.2rem;
+  }
+  
+  .section_subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .facility_card {
+    padding: 2rem 1.5rem;
+  }
+
   .cta {
     padding: 4rem 1.5rem;
   }
@@ -591,6 +728,14 @@
   .floating_badge {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+  }
+
+  .section_title {
+    font-size: 1.8rem;
+  }
+  
+  .facility_cards {
+    grid-template-columns: 1fr;
   }
   
   .testimonial_author img {
